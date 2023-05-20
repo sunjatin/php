@@ -1,11 +1,11 @@
 <?php
 function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root';
-    $DATABASE_NAME = 'phpcrud';
+    $server="localhost";
+	$username="root";
+	$password="root";
+	$database="phpcrud";
     try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+    	return new PDO('mysql:host=' . $server . ';dbname=' . $database . ';charset=utf8', $username, $password);
     } catch (PDOException $exception) {
     	// If there is an error with the connection, stop the script and display the error.
     	exit('Failed to connect to database!');
@@ -28,6 +28,7 @@ echo <<<EOT
             <a href="index.php"><i class="fas fa-home"></i>Home</a>
     		<a href="read.php"><i class="fas fa-address-book"></i>Contacts</a>
             <a href="create.php"><i class="fas fa-pen"></i>Add</a>
+            <a href="login-page.php"><i class="fas fa-contact"></i>Login</a>
     	</div>
     </nav>
 EOT;

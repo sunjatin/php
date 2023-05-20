@@ -17,7 +17,7 @@ if (!empty($_POST)) {
     $stmt = $pdo->prepare('INSERT INTO kontak VALUES (?, ?, ?, ?, ?)');
     $stmt->execute([$id, $nama, $npm, $email, $hp]);
     // Output message
-    $msg = 'Created Successfully!';
+    $msg = 'Created Successfully!'; //SAMPE SINI DULU 16.16 WIB
 }
 ?>
 
